@@ -18,6 +18,7 @@ add_executable(vb4onboarding)
 target_sources(vb4onboarding
     PRIVATE
         src/main.cpp
+        src/guideline_violation.cpp
 )
 
 # Find and link dependencies provided by Conan (via CMakeDeps)
