@@ -27,6 +27,6 @@ jobs:
       env:
         CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
       run: |
-        cursor-agent -p "Your prompt here" --model gpt-5
+        cursor-agent -p "Build and run project" --model gpt-5
 
 
