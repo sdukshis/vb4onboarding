@@ -1,0 +1,32 @@
+name: AI Build and Run
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-build-run-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ai-build-run:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install Cursor CLI
+      run: |
+        curl https://cursor.com/install -fsS | bash
+        echo "$HOME/.cursor/bin" >> $GITHUB_PATH
+
+    - name: Run Cursor Agent
+      env:
+        CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+      run: |
+        cursor-agent -p "Your prompt here" --model gpt-5
+
+

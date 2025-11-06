@@ -1,0 +1,28 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+dist/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+_deps/
+
+# Conan
+conan.lock
+conanbuild/
+conan_cache/
+
+# IDEs/Editors
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+
+# Python
+.venv/

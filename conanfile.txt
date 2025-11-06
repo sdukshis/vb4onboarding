@@ -1,0 +1,11 @@
+[requires]
+fmt/[>=10 <12]
+
+[generators]
+CMakeDeps
+CMakeToolchain
+
+[layout]
+cmake_layout
+
+
